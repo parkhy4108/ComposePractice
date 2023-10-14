@@ -103,7 +103,7 @@ class MainActivity : ComponentActivity() {
                                 .background(Color.Black)
                                 .padding(contentPadding)
                         ) {
-                            PosterAnimation()
+//                            PosterAnimation()
                         }
                     }
 //                    animationPractice1()
