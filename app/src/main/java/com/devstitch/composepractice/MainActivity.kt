@@ -108,8 +108,6 @@ class MainActivity : ComponentActivity() {
                     }
 //                    animationPractice1()
 //                    ComposeLine()
-
-
                 }
             }
         }
@@ -171,62 +169,62 @@ fun ScreenSizeControllerFeature() {
 
 }
 
-@Composable
-fun AnimationPractice1() {
-    var editable by remember { mutableStateOf(true) }
+//@Composable
+//fun AnimationPractice1() {
+//    var editable by remember { mutableStateOf(true) }
+//
+//    Column(
+//        modifier = Modifier
+//            .size(30.dp)
+//            .fillMaxWidth()
+//    ) {
+//        Button(onClick = { editable = !editable }) {
+//            Text(text = "Visibility $editable")
+//        }
+//
+//        AnimatedVisibility(visible = editable) {
+//            Text(text = "Edit", fontSize = 30.sp)
+//        }
+//    }
+//
+//}
 
-    Column(
-        modifier = Modifier
-            .size(30.dp)
-            .fillMaxWidth()
-    ) {
-        Button(onClick = { editable = !editable }) {
-            Text(text = "Visibility $editable")
-        }
-
-        AnimatedVisibility(visible = editable) {
-            Text(text = "Edit", fontSize = 30.sp)
-        }
-    }
-
-}
-
-@Composable
-fun ComposeLine() {
-    val cutCornerSize = 30.dp
-    val cornerRadius = 10.dp
-    Box(
-        modifier = Modifier
-            .size(300.dp)
-            .padding(30.dp)
-    ) {
-        Canvas(modifier = Modifier.matchParentSize()) {
-            val clipPath = Path().apply {
-                lineTo(size.width - cutCornerSize.toPx(), 0f)
-                lineTo(size.width, cutCornerSize.toPx())
-                lineTo(size.width, size.height)
-                lineTo(0f, size.height)
-                close()
-            }
-
-            clipPath(clipPath) {
-                drawRoundRect(
-                    color = Color.Red,
-                    size = size,
-                    cornerRadius = CornerRadius(cornerRadius.toPx())
-                )
-                drawRoundRect(
-                    color = Color(
-                        ColorUtils.blendARGB(Color.Black.toArgb(), 0x000000, 0.5f)
-                    ),
-                    topLeft = Offset(size.width - cutCornerSize.toPx(), -100f),
-                    size = Size(cutCornerSize.toPx() + 100f, cutCornerSize.toPx() + 150f),
-                    cornerRadius = CornerRadius(cornerRadius.toPx())
-                )
-            }
-        }
-    }
-}
+//@Composable
+//fun ComposeLine() {
+//    val cutCornerSize = 30.dp
+//    val cornerRadius = 10.dp
+//    Box(
+//        modifier = Modifier
+//            .size(300.dp)
+//            .padding(30.dp)
+//    ) {
+//        Canvas(modifier = Modifier.matchParentSize()) {
+//            val clipPath = Path().apply {
+//                lineTo(size.width - cutCornerSize.toPx(), 0f)
+//                lineTo(size.width, cutCornerSize.toPx())
+//                lineTo(size.width, size.height)
+//                lineTo(0f, size.height)
+//                close()
+//            }
+//
+//            clipPath(clipPath) {
+//                drawRoundRect(
+//                    color = Color.Red,
+//                    size = size,
+//                    cornerRadius = CornerRadius(cornerRadius.toPx())
+//                )
+//                drawRoundRect(
+//                    color = Color(
+//                        ColorUtils.blendARGB(Color.Black.toArgb(), 0x000000, 0.5f)
+//                    ),
+//                    topLeft = Offset(size.width - cutCornerSize.toPx(), -100f),
+//                    size = Size(cutCornerSize.toPx() + 100f, cutCornerSize.toPx() + 150f),
+//                    cornerRadius = CornerRadius(cornerRadius.toPx())
+//                )
+//            }
+//        }
+//    }
+//}
 
 @Composable
 fun PosterAnimation() {
