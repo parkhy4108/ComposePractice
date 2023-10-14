@@ -226,81 +226,81 @@ fun ScreenSizeControllerFeature() {
 //    }
 //}
 
-@Composable
-fun PosterAnimation() {
-    val posterList1 = listOf(
-        painterResource(id = R.drawable.poster2),
-        painterResource(id = R.drawable.poster3),
-        painterResource(id = R.drawable.poster4),
-        painterResource(id = R.drawable.poster5),
-        painterResource(id = R.drawable.poster6),
-        painterResource(id = R.drawable.poster7),
-        painterResource(id = R.drawable.poster2),
-        painterResource(id = R.drawable.poster3),
-        painterResource(id = R.drawable.poster4),
-        painterResource(id = R.drawable.poster5),
-        painterResource(id = R.drawable.poster6),
-        painterResource(id = R.drawable.poster7),
-        painterResource(id = R.drawable.poster2),
-        painterResource(id = R.drawable.poster3),
-        painterResource(id = R.drawable.poster4),
-        painterResource(id = R.drawable.poster5),
-        painterResource(id = R.drawable.poster6),
-        painterResource(id = R.drawable.poster7)
-    )
-
-    val posterList2 = listOf(
-        painterResource(id = R.drawable.poster3),
-        painterResource(id = R.drawable.poster4),
-        painterResource(id = R.drawable.poster5),
-        painterResource(id = R.drawable.poster2),
-        painterResource(id = R.drawable.poster3),
-        painterResource(id = R.drawable.poster4),
-        painterResource(id = R.drawable.poster5),
-        painterResource(id = R.drawable.poster6),
-        painterResource(id = R.drawable.poster7),
-        painterResource(id = R.drawable.poster2),
-        painterResource(id = R.drawable.poster6),
-        painterResource(id = R.drawable.poster7),
-        painterResource(id = R.drawable.poster2),
-        painterResource(id = R.drawable.poster3),
-        painterResource(id = R.drawable.poster4),
-        painterResource(id = R.drawable.poster5),
-        painterResource(id = R.drawable.poster6),
-        painterResource(id = R.drawable.poster7)
-    )
-
-    val posterList3 = listOf(
-        painterResource(id = R.drawable.poster4),
-        painterResource(id = R.drawable.poster5),
-        painterResource(id = R.drawable.poster6),
-        painterResource(id = R.drawable.poster7),
-        painterResource(id = R.drawable.poster2),
-        painterResource(id = R.drawable.poster3),
-        painterResource(id = R.drawable.poster4),
-        painterResource(id = R.drawable.poster5),
-        painterResource(id = R.drawable.poster6),
-        painterResource(id = R.drawable.poster7),
-        painterResource(id = R.drawable.poster2),
-        painterResource(id = R.drawable.poster3),
-        painterResource(id = R.drawable.poster4),
-        painterResource(id = R.drawable.poster5),
-        painterResource(id = R.drawable.poster6),
-        painterResource(id = R.drawable.poster7),
-        painterResource(id = R.drawable.poster2),
-        painterResource(id = R.drawable.poster3)
-    )
-    LazyColumn(
-        modifier = Modifier.padding(10.dp, 0.dp),
-        verticalArrangement = Arrangement.spacedBy(5.dp),
-        horizontalAlignment = Alignment.CenterHorizontally
-    ) {
-        item { MainPoster() }
-        item { MoviesRow(posters = posterList1) }
-        item { MoviesRow(posters = posterList2) }
-        item { MoviesRow(posters = posterList3) }
-    }
-}
+//@Composable
+//fun PosterAnimation() {
+//    val posterList1 = listOf(
+//        painterResource(id = R.drawable.poster2),
+//        painterResource(id = R.drawable.poster3),
+//        painterResource(id = R.drawable.poster4),
+//        painterResource(id = R.drawable.poster5),
+//        painterResource(id = R.drawable.poster6),
+//        painterResource(id = R.drawable.poster7),
+//        painterResource(id = R.drawable.poster2),
+//        painterResource(id = R.drawable.poster3),
+//        painterResource(id = R.drawable.poster4),
+//        painterResource(id = R.drawable.poster5),
+//        painterResource(id = R.drawable.poster6),
+//        painterResource(id = R.drawable.poster7),
+//        painterResource(id = R.drawable.poster2),
+//        painterResource(id = R.drawable.poster3),
+//        painterResource(id = R.drawable.poster4),
+//        painterResource(id = R.drawable.poster5),
+//        painterResource(id = R.drawable.poster6),
+//        painterResource(id = R.drawable.poster7)
+//    )
+//
+//    val posterList2 = listOf(
+//        painterResource(id = R.drawable.poster3),
+//        painterResource(id = R.drawable.poster4),
+//        painterResource(id = R.drawable.poster5),
+//        painterResource(id = R.drawable.poster2),
+//        painterResource(id = R.drawable.poster3),
+//        painterResource(id = R.drawable.poster4),
+//        painterResource(id = R.drawable.poster5),
+//        painterResource(id = R.drawable.poster6),
+//        painterResource(id = R.drawable.poster7),
+//        painterResource(id = R.drawable.poster2),
+//        painterResource(id = R.drawable.poster6),
+//        painterResource(id = R.drawable.poster7),
+//        painterResource(id = R.drawable.poster2),
+//        painterResource(id = R.drawable.poster3),
+//        painterResource(id = R.drawable.poster4),
+//        painterResource(id = R.drawable.poster5),
+//        painterResource(id = R.drawable.poster6),
+//        painterResource(id = R.drawable.poster7)
+//    )
+//
+//    val posterList3 = listOf(
+//        painterResource(id = R.drawable.poster4),
+//        painterResource(id = R.drawable.poster5),
+//        painterResource(id = R.drawable.poster6),
+//        painterResource(id = R.drawable.poster7),
+//        painterResource(id = R.drawable.poster2),
+//        painterResource(id = R.drawable.poster3),
+//        painterResource(id = R.drawable.poster4),
+//        painterResource(id = R.drawable.poster5),
+//        painterResource(id = R.drawable.poster6),
+//        painterResource(id = R.drawable.poster7),
+//        painterResource(id = R.drawable.poster2),
+//        painterResource(id = R.drawable.poster3),
+//        painterResource(id = R.drawable.poster4),
+//        painterResource(id = R.drawable.poster5),
+//        painterResource(id = R.drawable.poster6),
+//        painterResource(id = R.drawable.poster7),
+//        painterResource(id = R.drawable.poster2),
+//        painterResource(id = R.drawable.poster3)
+//    )
+//    LazyColumn(
+//        modifier = Modifier.padding(10.dp, 0.dp),
+//        verticalArrangement = Arrangement.spacedBy(5.dp),
+//        horizontalAlignment = Alignment.CenterHorizontally
+//    ) {
+//        item { MainPoster() }
+//        item { MoviesRow(posters = posterList1) }
+//        item { MoviesRow(posters = posterList2) }
+//        item { MoviesRow(posters = posterList3) }
+//    }
+//}
 
 fun LazyListScope.movieItems(
     items: List<Painter>,
