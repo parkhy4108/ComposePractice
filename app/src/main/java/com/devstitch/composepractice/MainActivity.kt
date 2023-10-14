@@ -108,8 +108,6 @@ class MainActivity : ComponentActivity() {
                     }
 //                    animationPractice1()
 //                    ComposeLine()
-
-
                 }
             }
         }
@@ -171,138 +169,138 @@ fun ScreenSizeControllerFeature() {
 
 }
 
-@Composable
-fun AnimationPractice1() {
-    var editable by remember { mutableStateOf(true) }
+//@Composable
+//fun AnimationPractice1() {
+//    var editable by remember { mutableStateOf(true) }
+//
+//    Column(
+//        modifier = Modifier
+//            .size(30.dp)
+//            .fillMaxWidth()
+//    ) {
+//        Button(onClick = { editable = !editable }) {
+//            Text(text = "Visibility $editable")
+//        }
+//
+//        AnimatedVisibility(visible = editable) {
+//            Text(text = "Edit", fontSize = 30.sp)
+//        }
+//    }
+//
+//}
 
-    Column(
-        modifier = Modifier
-            .size(30.dp)
-            .fillMaxWidth()
-    ) {
-        Button(onClick = { editable = !editable }) {
-            Text(text = "Visibility $editable")
-        }
+//@Composable
+//fun ComposeLine() {
+//    val cutCornerSize = 30.dp
+//    val cornerRadius = 10.dp
+//    Box(
+//        modifier = Modifier
+//            .size(300.dp)
+//            .padding(30.dp)
+//    ) {
+//        Canvas(modifier = Modifier.matchParentSize()) {
+//            val clipPath = Path().apply {
+//                lineTo(size.width - cutCornerSize.toPx(), 0f)
+//                lineTo(size.width, cutCornerSize.toPx())
+//                lineTo(size.width, size.height)
+//                lineTo(0f, size.height)
+//                close()
+//            }
+//
+//            clipPath(clipPath) {
+//                drawRoundRect(
+//                    color = Color.Red,
+//                    size = size,
+//                    cornerRadius = CornerRadius(cornerRadius.toPx())
+//                )
+//                drawRoundRect(
+//                    color = Color(
+//                        ColorUtils.blendARGB(Color.Black.toArgb(), 0x000000, 0.5f)
+//                    ),
+//                    topLeft = Offset(size.width - cutCornerSize.toPx(), -100f),
+//                    size = Size(cutCornerSize.toPx() + 100f, cutCornerSize.toPx() + 150f),
+//                    cornerRadius = CornerRadius(cornerRadius.toPx())
+//                )
+//            }
+//        }
+//    }
+//}
 
-        AnimatedVisibility(visible = editable) {
-            Text(text = "Edit", fontSize = 30.sp)
-        }
-    }
-
-}
-
-@Composable
-fun ComposeLine() {
-    val cutCornerSize = 30.dp
-    val cornerRadius = 10.dp
-    Box(
-        modifier = Modifier
-            .size(300.dp)
-            .padding(30.dp)
-    ) {
-        Canvas(modifier = Modifier.matchParentSize()) {
-            val clipPath = Path().apply {
-                lineTo(size.width - cutCornerSize.toPx(), 0f)
-                lineTo(size.width, cutCornerSize.toPx())
-                lineTo(size.width, size.height)
-                lineTo(0f, size.height)
-                close()
-            }
-
-            clipPath(clipPath) {
-                drawRoundRect(
-                    color = Color.Red,
-                    size = size,
-                    cornerRadius = CornerRadius(cornerRadius.toPx())
-                )
-                drawRoundRect(
-                    color = Color(
-                        ColorUtils.blendARGB(Color.Black.toArgb(), 0x000000, 0.5f)
-                    ),
-                    topLeft = Offset(size.width - cutCornerSize.toPx(), -100f),
-                    size = Size(cutCornerSize.toPx() + 100f, cutCornerSize.toPx() + 150f),
-                    cornerRadius = CornerRadius(cornerRadius.toPx())
-                )
-            }
-        }
-    }
-}
-
-@Composable
-fun PosterAnimation() {
-    val posterList1 = listOf(
-        painterResource(id = R.drawable.poster2),
-        painterResource(id = R.drawable.poster3),
-        painterResource(id = R.drawable.poster4),
-        painterResource(id = R.drawable.poster5),
-        painterResource(id = R.drawable.poster6),
-        painterResource(id = R.drawable.poster7),
-        painterResource(id = R.drawable.poster2),
-        painterResource(id = R.drawable.poster3),
-        painterResource(id = R.drawable.poster4),
-        painterResource(id = R.drawable.poster5),
-        painterResource(id = R.drawable.poster6),
-        painterResource(id = R.drawable.poster7),
-        painterResource(id = R.drawable.poster2),
-        painterResource(id = R.drawable.poster3),
-        painterResource(id = R.drawable.poster4),
-        painterResource(id = R.drawable.poster5),
-        painterResource(id = R.drawable.poster6),
-        painterResource(id = R.drawable.poster7)
-    )
-
-    val posterList2 = listOf(
-        painterResource(id = R.drawable.poster3),
-        painterResource(id = R.drawable.poster4),
-        painterResource(id = R.drawable.poster5),
-        painterResource(id = R.drawable.poster2),
-        painterResource(id = R.drawable.poster3),
-        painterResource(id = R.drawable.poster4),
-        painterResource(id = R.drawable.poster5),
-        painterResource(id = R.drawable.poster6),
-        painterResource(id = R.drawable.poster7),
-        painterResource(id = R.drawable.poster2),
-        painterResource(id = R.drawable.poster6),
-        painterResource(id = R.drawable.poster7),
-        painterResource(id = R.drawable.poster2),
-        painterResource(id = R.drawable.poster3),
-        painterResource(id = R.drawable.poster4),
-        painterResource(id = R.drawable.poster5),
-        painterResource(id = R.drawable.poster6),
-        painterResource(id = R.drawable.poster7)
-    )
-
-    val posterList3 = listOf(
-        painterResource(id = R.drawable.poster4),
-        painterResource(id = R.drawable.poster5),
-        painterResource(id = R.drawable.poster6),
-        painterResource(id = R.drawable.poster7),
-        painterResource(id = R.drawable.poster2),
-        painterResource(id = R.drawable.poster3),
-        painterResource(id = R.drawable.poster4),
-        painterResource(id = R.drawable.poster5),
-        painterResource(id = R.drawable.poster6),
-        painterResource(id = R.drawable.poster7),
-        painterResource(id = R.drawable.poster2),
-        painterResource(id = R.drawable.poster3),
-        painterResource(id = R.drawable.poster4),
-        painterResource(id = R.drawable.poster5),
-        painterResource(id = R.drawable.poster6),
-        painterResource(id = R.drawable.poster7),
-        painterResource(id = R.drawable.poster2),
-        painterResource(id = R.drawable.poster3)
-    )
-    LazyColumn(
-        modifier = Modifier.padding(10.dp, 0.dp),
-        verticalArrangement = Arrangement.spacedBy(5.dp),
-        horizontalAlignment = Alignment.CenterHorizontally
-    ) {
-        item { MainPoster() }
-        item { MoviesRow(posters = posterList1) }
-        item { MoviesRow(posters = posterList2) }
-        item { MoviesRow(posters = posterList3) }
-    }
-}
+//@Composable
+//fun PosterAnimation() {
+//    val posterList1 = listOf(
+//        painterResource(id = R.drawable.poster2),
+//        painterResource(id = R.drawable.poster3),
+//        painterResource(id = R.drawable.poster4),
+//        painterResource(id = R.drawable.poster5),
+//        painterResource(id = R.drawable.poster6),
+//        painterResource(id = R.drawable.poster7),
+//        painterResource(id = R.drawable.poster2),
+//        painterResource(id = R.drawable.poster3),
+//        painterResource(id = R.drawable.poster4),
+//        painterResource(id = R.drawable.poster5),
+//        painterResource(id = R.drawable.poster6),
+//        painterResource(id = R.drawable.poster7),
+//        painterResource(id = R.drawable.poster2),
+//        painterResource(id = R.drawable.poster3),
+//        painterResource(id = R.drawable.poster4),
+//        painterResource(id = R.drawable.poster5),
+//        painterResource(id = R.drawable.poster6),
+//        painterResource(id = R.drawable.poster7)
+//    )
+//
+//    val posterList2 = listOf(
+//        painterResource(id = R.drawable.poster3),
+//        painterResource(id = R.drawable.poster4),
+//        painterResource(id = R.drawable.poster5),
+//        painterResource(id = R.drawable.poster2),
+//        painterResource(id = R.drawable.poster3),
+//        painterResource(id = R.drawable.poster4),
+//        painterResource(id = R.drawable.poster5),
+//        painterResource(id = R.drawable.poster6),
+//        painterResource(id = R.drawable.poster7),
+//        painterResource(id = R.drawable.poster2),
+//        painterResource(id = R.drawable.poster6),
+//        painterResource(id = R.drawable.poster7),
+//        painterResource(id = R.drawable.poster2),
+//        painterResource(id = R.drawable.poster3),
+//        painterResource(id = R.drawable.poster4),
+//        painterResource(id = R.drawable.poster5),
+//        painterResource(id = R.drawable.poster6),
+//        painterResource(id = R.drawable.poster7)
+//    )
+//
+//    val posterList3 = listOf(
+//        painterResource(id = R.drawable.poster4),
+//        painterResource(id = R.drawable.poster5),
+//        painterResource(id = R.drawable.poster6),
+//        painterResource(id = R.drawable.poster7),
+//        painterResource(id = R.drawable.poster2),
+//        painterResource(id = R.drawable.poster3),
+//        painterResource(id = R.drawable.poster4),
+//        painterResource(id = R.drawable.poster5),
+//        painterResource(id = R.drawable.poster6),
+//        painterResource(id = R.drawable.poster7),
+//        painterResource(id = R.drawable.poster2),
+//        painterResource(id = R.drawable.poster3),
+//        painterResource(id = R.drawable.poster4),
+//        painterResource(id = R.drawable.poster5),
+//        painterResource(id = R.drawable.poster6),
+//        painterResource(id = R.drawable.poster7),
+//        painterResource(id = R.drawable.poster2),
+//        painterResource(id = R.drawable.poster3)
+//    )
+//    LazyColumn(
+//        modifier = Modifier.padding(10.dp, 0.dp),
+//        verticalArrangement = Arrangement.spacedBy(5.dp),
+//        horizontalAlignment = Alignment.CenterHorizontally
+//    ) {
+//        item { MainPoster() }
+//        item { MoviesRow(posters = posterList1) }
+//        item { MoviesRow(posters = posterList2) }
+//        item { MoviesRow(posters = posterList3) }
+//    }
+//}
 
 fun LazyListScope.movieItems(
     items: List<Painter>,
