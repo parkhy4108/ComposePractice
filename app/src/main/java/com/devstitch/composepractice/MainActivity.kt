@@ -109,6 +109,7 @@ class MainActivity : ComponentActivity() {
 //                    animationPractice1()
 //                    ComposeLine()
                 }
+                //// 추가3
             }
         }
     }
