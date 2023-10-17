@@ -105,6 +105,8 @@ class MainActivity : ComponentActivity() {
                         ) {
 //                            PosterAnimation()
                         }
+                        /////추가
+                        /////추가2
                     }
 //                    animationPractice1()
 //                    ComposeLine()
